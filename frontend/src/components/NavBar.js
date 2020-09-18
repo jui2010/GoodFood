@@ -9,7 +9,7 @@ import HomeIcon from '@material-ui/icons/Home'
 
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-// import logo from '../assets/goodfood.png'
+import logo from '../assets/goodfood.png'
 
 import { useAuth0 } from "@auth0/auth0-react"
 
@@ -81,7 +81,7 @@ const NavBar = (props) => {
                 <Toolbar style={{ height: 50}}>
 
                     {/* logog */}
-                    {/* <img src={logo} alt="Profile" width="50" height="40" className={classes.logo}/> */}
+                    <img src={logo} alt="Profile" width="50" height="40" className={classes.logo}/>
 
                     {/* immunize title */}
                     <div className={classes.immunize}>

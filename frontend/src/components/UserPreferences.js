@@ -16,15 +16,18 @@ import FiberSmartRecordIcon from '@material-ui/icons/FiberSmartRecord'
 import FastfoodIcon from '@material-ui/icons/Fastfood'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter'
+import SignalCellularNoSimIcon from '@material-ui/icons/SignalCellularNoSim';
 
 import PublicIcon from '@material-ui/icons/Public';
-import LanguageIcon from '@material-ui/icons/Language';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import ToysIcon from '@material-ui/icons/Toys'
 import SpaIcon from '@material-ui/icons/Spa'
 import PetsIcon from '@material-ui/icons/Pets'
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
 import PeopleIcon from '@material-ui/icons/People'
 import FingerprintIcon from '@material-ui/icons/Fingerprint'
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
+import LocalCafeIcon from '@material-ui/icons/LocalCafe';
 
 import axios from 'axios'
 
@@ -32,6 +35,8 @@ import {connect} from 'react-redux'
 import {editUserDetails} from '../redux/actions/userActions'
 import store from '../redux/store'
 import {EDIT_USER_DETAILS} from '../redux/types'
+
+var randomColor = require('randomcolor')
 
 const styles = (theme) => ({
     ...theme.spread,
@@ -61,20 +66,24 @@ const styles = (theme) => ({
 export class UserPreferences extends Component {
 
     state = {
-        editUsername : false,
-        editLocation : false,
-        firstName : this.props.user.authenticatedUser.firstName,
-        lastName : this.props.user.authenticatedUser.lastName,
-        profilePicture : this.props.user.authenticatedUser.profilePicture,
-        email : this.props.user.authenticatedUser.email,
-        username : this.props.user.authenticatedUser.username,
-        location : '',
-        dob : '',
-        age : '',
-        panNumber : '',
-        pictures: '',
-        occupation : '',
-        disease : ''
+        freshness : true,
+        nonVegetarian : true,
+        vegetarian : true,
+        vegan : true,
+        taste : true,
+        organic : true,
+        healthy : true,
+        glutenFree : true,
+        dairy : true,
+        countryOfOrigin : true,
+        regionalProduct : true,
+        ecoFriendly : true,
+        natural : true,
+        animalFriendly : true,
+        crueltyFree : true,
+        socialStandards : true,
+        CO2Footprint : true,
+        plasticFree : true
     } 
     
     onDrop = (picture) => {
@@ -140,10 +149,6 @@ export class UserPreferences extends Component {
 
         console.log(userDetails)
     }
-
-    handleDelete = () => {
-        console.log('You clicked the delete icon.');
-    }
     
     render() {
         const { classes } = this.props
@@ -160,46 +165,76 @@ export class UserPreferences extends Component {
                             icon={<WavesIcon />}
                             label="Freshness"
                             variant="outlined"
+                            onClick={() => this.setState({freshness : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.freshness ? 'white' : randomColor({luminosity : 'light'}) }}
                         />
                         
                         <Chip
                             icon={<EcoIcon />}
                             label="Vegetarian"
                             variant="outlined"
+                            onClick={() => this.setState({vegetarian : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.vegetarian ? '' : randomColor({luminosity : 'light'}) }}
                         />
                         <Chip
                             icon={<FilterVintageIcon />}
                             label="Vegan"
                             variant="outlined"
+                            onClick={() => this.setState({vegan : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.vegan ? '' : randomColor({luminosity : 'light'}) }}
                         />
                         <Chip
                             icon={<FiberSmartRecordIcon />}
                             label="Non-Vegetarian"
                             variant="outlined"
+                            onClick={() => this.setState({nonVegetarian : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.nonVegetarian ? '' : randomColor({luminosity : 'light'}) }}
                         />               
                         <Chip
                             icon={<FastfoodIcon />}
                             label="Taste"
                             variant="outlined"
+                            onClick={() => this.setState({taste : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.taste ? '' : randomColor({luminosity : 'light'}) }}
                         />
                         <Chip
                             icon={<FavoriteIcon />}
                             label="Organic"
                             variant="outlined"
+                            onClick={() => this.setState({organic : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.organic ? '' : randomColor({luminosity : 'light'}) }}
                         />
                         <Chip
                             icon={<FitnessCenterIcon/>}
                             label="Healthy"
                             variant="outlined"
+                            onClick={() => this.setState({healthy : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.healthy ? '' : randomColor({luminosity : 'light'}) }}
                         />                   
-                    
+                        <Chip
+                            icon={<SignalCellularNoSimIcon/>}
+                            label="Gluten free"
+                            variant="outlined"
+                            onClick={() => this.setState({glutenFree : false})}
+                            className={classes.chip}
+                            style={{backgroundColor : this.state.glutenFree ? '' : randomColor({luminosity : 'light'}) }}
+                        /> 
+                        <Chip
+                            icon={<LocalCafeIcon/>}
+                            label="Dairy"
+                            variant="outlined"
+                            onClick={() => this.setState({dairy : false})}
+                            className={classes.chip}
+                            style={{backgroundColor : this.state.dairy ? '' : randomColor({luminosity : 'light'}) }}
+                        /> 
+                       
                     </Grid>
 
                     <Grid item xs={11} container style={{fontSize: '16px'}}>
@@ -212,52 +247,75 @@ export class UserPreferences extends Component {
                             icon={<PublicIcon />}
                             label="Country of origin"
                             variant="outlined"
+                            onClick={() => this.setState({countryOfOrigin : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.countryOfOrigin ? '' : randomColor({luminosity : 'light'}) }}
                         />
                         
                         <Chip
-                            icon={<LanguageIcon />}
+                            icon={< LocalOfferIcon/>}
                             label="Regional product"
                             variant="outlined"
+                            onClick={() => this.setState({regionalProduct : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.regionalProduct ? '' : randomColor({luminosity : 'light'}) }}
                         />
                         <Chip
                             icon={<ToysIcon />}
                             label="Eco-friendly"
                             variant="outlined"
+                            onClick={() => this.setState({ecoFriendly : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.ecoFriendly ? '' : randomColor({luminosity : 'light'}) }}
                         />  
                         <Chip
                             icon={<SpaIcon />}
                             label="Natural"
                             variant="outlined"
+                            onClick={() => this.setState({natural : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.natural ? '' : randomColor({luminosity : 'light'}) }}
                         />                  
                         <Chip
                             icon={<PetsIcon />}
                             label="Animal friendly"
                             variant="outlined"
+                            onClick={() => this.setState({animalFriendly : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.animalFriendly ? '' : randomColor({luminosity : 'light'}) }}
                         />
                         <Chip
                             icon={<NotInterestedIcon />}
                             label="Cruelty free"
                             variant="outlined"
+                            onClick={() => this.setState({crueltyFree : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.crueltyFree ? '' : randomColor({luminosity : 'light'}) }}
                         />
                         <Chip
                             icon={<PeopleIcon />}
                             label="Social standards"
                             variant="outlined"
+                            onClick={() => this.setState({socialStandards : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.socialStandards ? '' : randomColor({luminosity : 'light'}) }}
                         />
                         <Chip
                             icon={<FingerprintIcon />}
                             label="CO2 footprint"
                             variant="outlined"
+                            onClick={() => this.setState({CO2Footprint : false})}
                             className={classes.chip}
+                            style={{backgroundColor : this.state.CO2Footprint ? '' : randomColor({luminosity : 'light'}) }}
                         />                   
-                        
+                        <Chip
+                            icon={<DeleteForeverIcon />}
+                            label="Plastic free"
+                            variant="outlined"
+                            onClick={() => this.setState({plasticFree : false})}
+                            className={classes.chip}
+                            style={{backgroundColor : this.state.plasticFree ? '' : randomColor({luminosity : 'light'}) }}
+                        /> 
                     </Grid>
 
                     <Button type="submit" variant="contained" color="secondary"
@@ -275,3 +333,4 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps , {editUserDetails})(withStyles(styles)(UserPreferences))
+

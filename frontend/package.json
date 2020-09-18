@@ -12,6 +12,7 @@
     "axios": "^0.19.2",
     "date-fns": "^2.15.0",
     "leaflet": "^1.6.0",
+    "randomcolor": "^0.6.2",
     "react": "^16.13.1",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
