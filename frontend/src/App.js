@@ -17,7 +17,7 @@ import store from './redux/store'
 // pages
 import home from './pages/home'
 import welcome from './pages/welcome'
-// import profile from './pages/profile'
+import profile from './pages/profile'
 
 import NavBar from './components/NavBar'
 
@@ -34,7 +34,7 @@ class App extends Component{
               <Switch>
                 <Route exact path="/" component={welcome} />
                 <Route exact path="/home" component={home} />
-                {/* <Route exact path="/profile" component={profile} /> */}
+                <Route exact path="/profile" component={profile} />
               </Switch>
             </div>
           </Router>
