@@ -1,0 +1,18 @@
+# Environments
+.env
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+Lib/
+venv/Lib/
+Scripts/ 
+
+__pycache__
+
+pyvenv.cfg
