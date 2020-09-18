@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline'
-import Tooltip from '@material-ui/core/Tooltip'
+import TooltipMUI from '@material-ui/core/Tooltip'
 import Avatar from '@material-ui/core/Avatar'
 import Chip from '@material-ui/core/Chip'
 import FaceIcon from '@material-ui/icons/Face'
@@ -29,6 +29,9 @@ import FingerprintIcon from '@material-ui/icons/Fingerprint'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
 import LocalCafeIcon from '@material-ui/icons/LocalCafe';
 
+import { RadarChart , PolarGrid ,PolarAngleAxis , PolarRadiusAxis , Radar , 
+    BarChart,Bar, CartesianGrid, XAxis, YAxis, Tooltip} from 'recharts'
+
 import axios from 'axios'
 
 import {connect} from 'react-redux'
@@ -37,6 +40,67 @@ import store from '../redux/store'
 import {EDIT_USER_DETAILS} from '../redux/types'
 
 var randomColor = require('randomcolor')
+const data = [
+    {
+      "subject": "Math",
+      "A": 120,
+      "B": 110,
+      "fullMark": 150
+    },
+    {
+      "subject": "Chinese",
+      "A": 98,
+      "B": 130,
+      "fullMark": 150
+    },
+    {
+      "subject": "English",
+      "A": 86,
+      "B": 130,
+      "fullMark": 150
+    },
+    {
+      "subject": "Geography",
+      "A": 99,
+      "B": 100,
+      "fullMark": 150
+    },
+    {
+      "subject": "Physics",
+      "A": 85,
+      "B": 90,
+      "fullMark": 150
+    },
+    {
+      "subject": "History",
+      "A": 65,
+      "B": 85,
+      "fullMark": 150
+    }
+  ]
+
+  const data_barchart = [
+    {
+      "name": "Page A",
+      "uv": 4000
+    },
+    {
+      "name": "Page B",
+      "uv": 3000
+    },
+    {
+      "name": "Page C",
+      "uv": 2000
+    },
+    {
+      "name": "Page D",
+      "uv": 2780
+    },
+    {
+      "name": "Page E",
+      "uv": 1890
+    }
+  ]
 
 const styles = (theme) => ({
     ...theme.spread,
@@ -85,82 +149,18 @@ export class UserPreferences extends Component {
         CO2Footprint : true,
         plasticFree : true
     } 
-    
-    onDrop = (picture) => {
-        this.setState({
-            pictures: picture
-        })
-    }
-
-    handleEditLocation = () => {
-        this.setState({
-        editLocation : true
-        })
-    }
-
-    handleNoEditLocation = () => {
-        this.setState({
-        editLocation : false
-        })
-    }
-
-    handleChange = (event) =>{
-        this.setState({
-            [event.target.name] : event.target.value 
-        })
-    }
-
-    handleSubmit = (event) => {
-        event.preventDefault()
-
-        const userDetails = {
-            _id : this.props.user.authenticatedUser._id,
-            firstName : this.state.firstName,
-            lastName : this.state.lastName,
-            profilePicture : this.state.profilePicture,
-            email : this.state.email,
-            location : this.state.location,
-            username : this.state.username
-        }
-
-        let userLoc = {
-            "location": this.state.location,
-            "options": {
-            "thumbMaps": false
-            }
-        }
-
-        axios.post(`http://www.mapquestapi.com/geocoding/v1/address?key=BHKWIylzKtkshRbp8hzzUU5L1bP7H3W3`, userLoc)
-            .then(res => {
-                let latlong = res.data.results[0].locations[0].displayLatLng
-                userDetails.lat = latlong.lat
-                userDetails.lng = latlong.lng
-
-                axios.post('http://127.0.0.1:5000/editUserDetails' , userDetails)
-                .then(res => {
-                    store.dispatch({
-                        type : EDIT_USER_DETAILS,
-                        payload : userDetails
-                    })
-                })
-
-            })
-            .catch(err => console.log(err) )
-
-        console.log(userDetails)
-    }
-    
+      
     render() {
         const { classes } = this.props
         return (
             <Grid item xs={12} sm container  spacing={2}>        
-                <Grid item xs={11} container direction="row" spacing={2}>
+                <Grid item xs={11} container direction="row" >
                     <Grid item xs={11} container style={{fontSize: '16px'}}>
                         <div><b>Select your preferred food choices:</b>
-                            <Tooltip title={"Selecting a particular food category will help us get you the best kinds of food which aligns to your choices"}  placement="top"><HelpOutlineIcon style={{fontSize : '15px', color : '#424242'}} /></Tooltip>
+                            <TooltipMUI title={"Selecting a particular food category will help us get you the best kinds of food which aligns to your choices"}  placement="top"><HelpOutlineIcon style={{fontSize : '15px', color : '#424242'}} /></TooltipMUI>
                         </div>
                     </Grid>
-                    <Grid container item direction="row"  style={{border : '1px solid black'}} >
+                    <Grid container item direction="row"  style={{border : '1px solid black', marginTop : '5px', padding : '5px'}} >
                         <Chip
                             icon={<WavesIcon />}
                             label="Freshness"
@@ -237,12 +237,12 @@ export class UserPreferences extends Component {
                        
                     </Grid>
 
-                    <Grid item xs={11} container style={{fontSize: '16px'}}>
+                    <Grid item xs={11} container style={{fontSize: '16px', margin : '5px', padding : '5px'}}>
                         <div><b>Select your secondary preferred choices:</b>
-                            <Tooltip title={"Selecting a particular food category will help us get you the best kinds of food which aligns to your choices"}  placement="top"><HelpOutlineIcon style={{fontSize : '15px', color : '#424242'}} /></Tooltip>
+                            <TooltipMUI title={"Selecting a particular food category will help us get you the best kinds of food which aligns to your choices"}  placement="top"><HelpOutlineIcon style={{fontSize : '15px', color : '#424242'}} /></TooltipMUI>
                         </div>
                     </Grid>
-                    <Grid container item direction="row"  style={{border : '1px solid black'}} >
+                    <Grid container item direction="row"  style={{border : '1px solid black', marginTop : '5px', padding : '5px'}} >
                         <Chip
                             icon={<PublicIcon />}
                             label="Country of origin"
@@ -318,10 +318,27 @@ export class UserPreferences extends Component {
                         /> 
                     </Grid>
 
-                    <Button type="submit" variant="contained" color="secondary"
-                        style={{fontFamily: 'Bebas Neue', margin : '10px 5px', fontSize : '20px', color : 'white'}}>        
-                        Save Changes
-                    </Button>
+                    <Grid container item direction="row"  style={{}} >
+                        <Grid item xs={6} container style={{fontSize: '16px', border : '1px solid black', marginTop : '15px', padding : '5px'}}>
+                            
+                        <RadarChart outerRadius={90} width={450} height={270} data={data}>
+                            <PolarGrid />
+                            <PolarAngleAxis dataKey="subject" />
+                            <PolarRadiusAxis angle={30} domain={[0, 150]} />
+                            <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.2} />
+                        </RadarChart>
+                        
+                        </Grid>
+                        <Grid item xs={6} container style={{fontSize: '16px', border : '1px solid black', marginTop : '15px', padding : '5px'}}>
+                            <BarChart width={450} height={270} barSize={20} data={data_barchart}>
+                                <CartesianGrid strokeDasharray="2 2" />
+                                <XAxis dataKey="name" />
+                                <YAxis />
+                                <Tooltip />
+                                <Bar dataKey="uv" fill="#82ca9d" />
+                            </BarChart>
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Grid>
         )
