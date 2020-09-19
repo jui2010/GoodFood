@@ -1,0 +1,154 @@
+[
+{
+"name" :  "broccoli",
+"category" : "freshness",
+"imgUrl" : "https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/health-benefits-of-broccoli-1296x728-feature.jpg"
+},
+{
+"name" : "oatmeal", 
+"category" : "freshness",
+"imgUrl" : "https://www.tasteofhome.com/wp-content/uploads/2018/01/Baked-Oatmeal_exps2346_W101973175C05_12_4bC_RMS-1-696x696.jpg"
+},
+{
+"name" : "beans", 
+"category" : "freshness",
+"imgUrl" : "https://i0.wp.com/www.eatthis.com/wp-content/uploads/2020/03/variety-of-beans.jpg"
+},
+{
+"name" : "mangoes", 
+"category" : "freshness",
+"imgUrl" : "https://img.etimg.com/thumb/msid-72081091,width-650,imgsize-865547,,resizemode-4,quality-100/alphonso-mangoes-which-the-city-obsesses-about-every-summer-were-now-being-sold-well-after-their-monsoon-cut-off-date.jpg"
+},
+{
+"name" : "salmon", 
+"category" : "freshness",
+"imgUrl" : "https://images.thefishsite.com/fish/articles/processing/salmon-fillet.jpeg"
+},
+
+{
+"name" :  "chicken",
+"category" : "nonVegetarian",
+"imgUrl" : "https://i2.wp.com/www.eatthis.com/wp-content/uploads/media/images/ext/993191471/roast-chicken-how-buy-healthiest-chicken.jpg"
+},
+{
+"name" : "fish", 
+"category" : "nonVegetarian",
+"imgUrl" : "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/best_and_worst_fish_for_your_health_slideshow/1800ss_getty_rf_baked_carp.jpg"
+},
+{
+"name" : "bacon", 
+"category" : "nonVegetarian",
+"imgUrl" : "https://www.pillsbury.com/-/media/PB/Images/everyday-eats/breakfast-brunch/how-to-cook-bacon-in-the-oven/how-to-cook-bacon_00.jpg"
+},
+{
+"name" : "eggs", 
+"category" : "nonVegetarian",
+"imgUrl" : "https://i0.wp.com/www.eatthis.com/wp-content/uploads/2018/10/different-ways-cooking-eggs.jpg"
+},
+{
+"name" : "beef", 
+"category" : "nonVegetarian",
+"imgUrl" : "https://challengedairy.com/sites/default/files/recipe/images/recipe_roast_beef_with_tangy_mustard_sauce_2280.jpg"
+},
+    {
+"name" :  "fruits",
+"category" : "vegetarian",
+"imgUrl" : "https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg"
+},
+{
+"name" : "vegetables", 
+"category" : "vegetarian",
+"imgUrl" : "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/12_powerhouse_vegetables_slideshow/intro_cream_of_crop.jpg"
+},
+{
+"name" : "pulses", 
+"category" : "vegetarian",
+"imgUrl" : "https://www.viralspices.com/wp-content/uploads/2018/07/pulses-and-lentils.jpg"
+},
+{
+"name" : "cereals", 
+"category" : "vegetarian",
+"imgUrl" : "https://cdn.asp.events/CLIENT_Dubai_Wo_4B15F265_5056_B739_54F3125D47F0BC95/sites/Gulfood2020/media/pulses-one.jpg"
+},
+{
+"name" : "nuts", 
+"category" : "vegetarian",
+"imgUrl" : "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1502826406%2F1708w-getty-nuts-assortment-fcafotodigital.jpg"
+},
+    {
+"name" :  "peas",
+"category" : "vegan",
+"imgUrl" : "https://www.almanac.com/sites/default/files/styles/primary_image_in_article/public/image_nodes/peas-and-pea-pods.jpg"
+},
+{
+"name" : "seeds", 
+"category" : "vegan",
+"imgUrl" : "https://www.centerforfoodsafety.org/thumbs/1900x850x50/files/zc/istock-91757065_36826.jpg"
+},
+{
+"name" : "bread", 
+"category" : "vegan",
+"imgUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Fresh_made_bread_05.jpg/1200px-Fresh_made_bread_05.jpg"
+},
+{
+"name" : "rice", 
+"category" : "vegan",
+"imgUrl" : "https://yaleclimatemediaforum.org/pics/cc/mc/102419_rice.jpg"
+},
+{
+"name" : "soymilk", 
+"category" : "vegan",
+"imgUrl" : "https://frigiv.palsgaard.com/media/1234/how-to-produce-delicious-soy-milk-with-palsgaard-recmilk-emulsifiers-and-stabilisers.jpg"
+},
+    {
+"name" :  "spicy",
+"category" : "taste",
+"imgUrl" : "https://i2.wp.com/www.eatthis.com/wp-content/uploads/media/images/ext/993191471/roast-chicken-how-buy-healthiest-chicken.jpg"
+},
+{
+"name" : "desserts", 
+"category" : "taste",
+"imgUrl" : "https://files.heftycdn.com/wp-content/uploads/2019/04/c7f06b4bce72dbd0b84240982f2166dc-800x457.jpg"
+},
+{
+"name" : "tangy", 
+"category" : "taste",
+"imgUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Fresh_made_bread_05.jpg/1200px-Fresh_made_bread_05.jpg"
+},
+{
+"name" : "rice", 
+"category" : "taste",
+"imgUrl" : "https://yaleclimatemediaforum.org/pics/cc/mc/102419_rice.jpg"
+},
+{
+"name" : "fastfood", 
+"category" : "taste",
+"imgUrl" : "https://cdn-images-1.medium.com/max/800/1*RIS_6IbCLYv1X3bzYW1lmA.jpeg"
+},
+    {
+"name" :  "cheese",
+"category" : "dairy",
+"imgUrl" : "https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/milk-dairy/2-1-3-1dairyfoods_cheese_detailfeature.jpg"
+},
+{
+"name" : "milk", 
+"category" : "dairy",
+"imgUrl" : "https://joya.info/images/content/1985538-1200x700c53x47-Faktencheck-Milchalternativen.jpg"
+},
+{
+"name" : "butter", 
+"category" : "dairy",
+"imgUrl" : "https://joya.info/images/content/1985538-1200x700c53x47-Faktencheck-Milchalternativen.jpg"
+},
+{
+"name" : "tofu", 
+"category" : "dairy",
+"imgUrl" : "https://cdn.cdnparenting.com/articles/2018/10/08135658/661010404-H-696x478.jpg"
+},
+{
+"name" : "yoghurt", 
+"category" : "dairy",
+"imgUrl" : "https://assets.tetrapak.com/static/publishingimages/processing/content-image/greek-yoghurt-in-bowl.jpg"
+}
+
+]

@@ -101,31 +101,32 @@ const NavBar = (props) => {
                         </Button>)}
 
                     {/* home */}
-                    {isAuthenticated && ( 
+                    {/* {isAuthenticated && (  */}
                         <Tooltip title="Home" >
                             <Button color="primary" component = {Link} to="/home" >
                                 <HomeIcon/>
                             </Button>
                         </Tooltip>
-                    )}
+                    {/* )} */}
 
                     {/* dashboard */}                        
-                    {isAuthenticated && ( 
-                        <Tooltip title="Dashboard" >
-                            <Button color="primary" component = {Link} to="/dashboard" >
+                    {/* {isAuthenticated && (  */}
+                        <Tooltip title="Info" >
+                            <Button color="primary" component = {Link} to="/scanIt" >
                                 <DashboardIcon/> 
                             </Button>
                         </Tooltip>
-                    )}
+                    {/* )} */}
 
                     {/* profile pic */}
-                    {isAuthenticated && ( 
+                    {/* {isAuthenticated && (  */}
                         <Tooltip title="Profile" >
                             <Button color="primary" component = {Link} to="/profile" className={classes.profileB}  >
-                                <img className={classes.profile} src={user.picture}  alt="Profile"/>
+                                <img className={classes.profile} alt="Profile"/>
+                                {/* <img className={classes.profile} src={user.picture}  alt="Profile"/> */}
                             </Button>
                         </Tooltip>
-                    )}
+                    {/* )} */}
                 </Toolbar>
             </AppBar>
         </div>

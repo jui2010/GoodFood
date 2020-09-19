@@ -35,9 +35,9 @@ import { RadarChart , PolarGrid ,PolarAngleAxis , PolarRadiusAxis , Radar ,
 import axios from 'axios'
 
 import {connect} from 'react-redux'
-import {editUserDetails} from '../redux/actions/userActions'
+// import {setPreferences} from '../redux/actions/userActions'
 import store from '../redux/store'
-import {EDIT_USER_DETAILS} from '../redux/types'
+import {SET_PREF } from '../redux/types'
 
 var randomColor = require('randomcolor')
 const data = [
@@ -153,7 +153,9 @@ export class UserPreferences extends Component {
                             icon={<WavesIcon />}
                             label="Freshness"
                             variant="outlined"
-                            onClick={() => this.setState({freshness : false})}
+                            onClick={() => {this.setState({freshness : false})
+                            store.dispatch({type : SET_PREF, payload : {... this.state, freshness : false} }) 
+                            }}
                             className={classes.chip}
                             style={{backgroundColor : this.state.freshness ? 'white' : randomColor({luminosity : 'light'}) }}
                         />
@@ -162,7 +164,9 @@ export class UserPreferences extends Component {
                             icon={<EcoIcon />}
                             label="Vegetarian"
                             variant="outlined"
-                            onClick={() => this.setState({vegetarian : false})}
+                            onClick={() => {this.setState({vegetarian : false})
+                            store.dispatch({type : SET_PREF, payload : {... this.state, vegetarian : false} }) 
+                            }}
                             className={classes.chip}
                             style={{backgroundColor : this.state.vegetarian ? '' : randomColor({luminosity : 'light'}) }}
                         />
@@ -170,7 +174,9 @@ export class UserPreferences extends Component {
                             icon={<FilterVintageIcon />}
                             label="Vegan"
                             variant="outlined"
-                            onClick={() => this.setState({vegan : false})}
+                            onClick={() => {this.setState({vegan : false})
+                            store.dispatch({type : SET_PREF, payload : {... this.state, vegan : false} }) 
+                            }}
                             className={classes.chip}
                             style={{backgroundColor : this.state.vegan ? '' : randomColor({luminosity : 'light'}) }}
                         />
@@ -178,7 +184,9 @@ export class UserPreferences extends Component {
                             icon={<FiberSmartRecordIcon />}
                             label="Non-Vegetarian"
                             variant="outlined"
-                            onClick={() => this.setState({nonVegetarian : false})}
+                            onClick={() => {this.setState({nonVegetarian : false})
+                            store.dispatch({type : SET_PREF, payload : {... this.state, nonVegetarian : false} }) 
+                            }}
                             className={classes.chip}
                             style={{backgroundColor : this.state.nonVegetarian ? '' : randomColor({luminosity : 'light'}) }}
                         />               
@@ -186,7 +194,9 @@ export class UserPreferences extends Component {
                             icon={<FastfoodIcon />}
                             label="Taste"
                             variant="outlined"
-                            onClick={() => this.setState({taste : false})}
+                            onClick={() => {this.setState({taste : false})
+                            store.dispatch({type : SET_PREF, payload : {... this.state, taste : false} }) 
+                            }}
                             className={classes.chip}
                             style={{backgroundColor : this.state.taste ? '' : randomColor({luminosity : 'light'}) }}
                         />
@@ -194,7 +204,9 @@ export class UserPreferences extends Component {
                             icon={<FavoriteIcon />}
                             label="Organic"
                             variant="outlined"
-                            onClick={() => this.setState({organic : false})}
+                            onClick={() => {this.setState({organic : false})
+                            store.dispatch({type : SET_PREF, payload : {... this.state, organic : false} }) 
+                            }}
                             className={classes.chip}
                             style={{backgroundColor : this.state.organic ? '' : randomColor({luminosity : 'light'}) }}
                         />
@@ -202,7 +214,9 @@ export class UserPreferences extends Component {
                             icon={<FitnessCenterIcon/>}
                             label="Healthy"
                             variant="outlined"
-                            onClick={() => this.setState({healthy : false})}
+                            onClick={() => {this.setState({healthy : false})
+                            store.dispatch({type : SET_PREF, payload : {... this.state, healthy : false} }) 
+                            }}
                             className={classes.chip}
                             style={{backgroundColor : this.state.healthy ? '' : randomColor({luminosity : 'light'}) }}
                         />                   
@@ -210,7 +224,9 @@ export class UserPreferences extends Component {
                             icon={<SignalCellularNoSimIcon/>}
                             label="Gluten free"
                             variant="outlined"
-                            onClick={() => this.setState({glutenFree : false})}
+                            onClick={() => {this.setState({glutenFree : false})
+                            store.dispatch({type : SET_PREF, payload : {... this.state, glutenFree : false} }) 
+                            }}
                             className={classes.chip}
                             style={{backgroundColor : this.state.glutenFree ? '' : randomColor({luminosity : 'light'}) }}
                         /> 
@@ -218,7 +234,9 @@ export class UserPreferences extends Component {
                             icon={<LocalCafeIcon/>}
                             label="Dairy"
                             variant="outlined"
-                            onClick={() => this.setState({dairy : false})}
+                            onClick={() => {this.setState({dairy : false})
+                            store.dispatch({type : SET_PREF, payload : {... this.state, dairy : false} }) 
+                            }}
                             className={classes.chip}
                             style={{backgroundColor : this.state.dairy ? '' : randomColor({luminosity : 'light'}) }}
                         /> 
@@ -235,7 +253,7 @@ export class UserPreferences extends Component {
                             icon={<PublicIcon />}
                             label="Country of origin"
                             variant="outlined"
-                            onClick={() => this.setState({countryOfOrigin : false})}
+                            onClick={() => this.setState({countryOfOrigin : false}) }
                             className={classes.chip}
                             style={{backgroundColor : this.state.countryOfOrigin ? '' : randomColor({luminosity : 'light'}) }}
                         />
@@ -309,7 +327,7 @@ export class UserPreferences extends Component {
                     <Grid container item direction="row"  style={{}} >
                         <Grid item xs={6} container style={{fontSize: '16px', border : '1px solid black', marginTop : '15px', padding : '5px'}}>
                             <div><b>
-                                Total food consumed 🚀
+                                Total food consumed 
                             </b>
                             </div>  
                             <RadarChart outerRadius={90} width={450} height={270} data={data}>
@@ -344,5 +362,5 @@ const mapStateToProps = (state) => ({
   user : state.user
 })
 
-export default connect(mapStateToProps , {editUserDetails})(withStyles(styles)(UserPreferences))
+export default connect(mapStateToProps , {})(withStyles(styles)(UserPreferences))
 

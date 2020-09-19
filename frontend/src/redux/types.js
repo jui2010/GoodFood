@@ -1,0 +1,5 @@
+//user reducer types
+export const SET_AUTHENTICATED_USER = 'SET_AUTHENTICATED_USER' 
+export const SET_AUTHENTICATED = 'SET_AUTHENTICATED' 
+export const SET_UNAUTHENTICATED = 'SET_UNAUTHENTICATED' 
+export const SET_PREF = 'SET_PREF' 

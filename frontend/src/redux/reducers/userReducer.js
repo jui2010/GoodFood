@@ -1,3 +1,5 @@
+import {SET_PREF } from '../types'
+
 const initialState = {
     authenticatedUser : {
         _id:"5f2ebeb9ebd9270fe69fd85e",
@@ -8,12 +10,29 @@ const initialState = {
         username:"jui20oct",
     },
     authenticated : true,
-    loading : false
+    loading : false,
+    preferences : {
+        freshness : true,
+        nonVegetarian : true,
+        vegetarian : true,
+        vegan : true,
+        taste : true,
+        organic : true,
+        healthy : true,
+        glutenFree : true,
+        dairy : true
+    } 
 }
 
 export default function(state = initialState , action){
     switch(action.type){
         
+        case SET_PREF :
+            return {
+                ...state,
+                preferences : action.payload
+            }
+
         default : 
             return {
                 ...state

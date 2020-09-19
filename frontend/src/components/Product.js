@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography'
 const styles = (theme) => ({
   ...theme.spread,
   root: {
-    maxWidth: 345,
+    width: 200,
     margin : '10px'
   },
   media: {
@@ -22,22 +22,22 @@ const styles = (theme) => ({
 class Product extends Component {
   render() {
     const { classes } = this.props
-    
+    const { name , imgUrl} = this.props
+
     return (
       <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://cdn.downtoearth.org.in/library/large/2019-02-22/0.25821200_1550842453_67.jpg"
-          title="Contemplative Reptile"
+          image={imgUrl}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            FoodItem
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <div style={{textTransform : 'capitalize', fontFamily: 'bold', color : '#616161', fontSize: '16px', fontFamily: 'Bebas Neue', }}>
+            {name}
+          </div>
+          {/* <Typography variant="body2" color="textSecondary" component="p">
             Contains Dairy, Peanuts
-          </Typography>
+          </Typography> */}
         </CardContent>
       </CardActionArea>
 
