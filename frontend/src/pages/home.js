@@ -117,6 +117,22 @@ class home extends Component {
                         {this.showProdCategories("healthy")}
                     </Grid>}
 
+                    {!glutenFree &&
+                    <Grid container direction="row">
+                        <div className={classes.prodSection}>
+                            Gluten free Products
+                        </div>
+                        {this.showProdCategories("glutenFree")}
+                    </Grid>}
+
+                    {!taste &&
+                    <Grid container direction="row">
+                        <div className={classes.prodSection}>
+                            Tasty Products
+                        </div>
+                        {this.showProdCategories("taste")}
+                    </Grid>}
+
                 </Grid>
             </Grid>
         )

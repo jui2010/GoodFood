@@ -24,7 +24,7 @@ const styles = (theme) => ({
     logo : {
         marginRight: theme.spacing(2),
     },
-    immunize : {
+    goodfood : {
         fontFamily: 'Bebas Neue',
         fontSize : '35px',
         marginTop : '5px',
@@ -83,8 +83,8 @@ const NavBar = (props) => {
                     {/* logog */}
                     <img src={logo} alt="Profile" width="50" height="40" className={classes.logo}/>
 
-                    {/* immunize title */}
-                    <div className={classes.immunize}>
+                    {/* goodfood title */}
+                    <div className={classes.goodfood}>
                         
                     </div>
 
@@ -101,32 +101,32 @@ const NavBar = (props) => {
                         </Button>)}
 
                     {/* home */}
-                    {/* {isAuthenticated && (  */}
+                    {isAuthenticated && ( 
                         <Tooltip title="Home" >
                             <Button color="primary" component = {Link} to="/home" >
                                 <HomeIcon/>
                             </Button>
                         </Tooltip>
-                    {/* )} */}
+                    )} 
 
                     {/* dashboard */}                        
-                    {/* {isAuthenticated && (  */}
+                    {isAuthenticated && ( 
                         <Tooltip title="Info" >
                             <Button color="primary" component = {Link} to="/scanIt" >
                                 <DashboardIcon/> 
                             </Button>
                         </Tooltip>
-                    {/* )} */}
+                    )}
 
                     {/* profile pic */}
-                    {/* {isAuthenticated && (  */}
+                    {isAuthenticated && (
                         <Tooltip title="Profile" >
                             <Button color="primary" component = {Link} to="/profile" className={classes.profileB}  >
-                                <img className={classes.profile} alt="Profile"/>
-                                {/* <img className={classes.profile} src={user.picture}  alt="Profile"/> */}
+                                {/* <img className={classes.profile} alt="Profile"/> */}
+                                <img className={classes.profile} src={user.picture}  alt="Profile"/>
                             </Button>
                         </Tooltip>
-                    {/* )} */}
+                    )}
                 </Toolbar>
             </AppBar>
         </div>

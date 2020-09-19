@@ -138,7 +138,7 @@
 {
 "name" : "butter", 
 "category" : "dairy",
-"imgUrl" : "https://joya.info/images/content/1985538-1200x700c53x47-Faktencheck-Milchalternativen.jpg"
+"imgUrl" : "https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/321/321990/close-up-of-block-of-butter-being-sliced-may-raise-cholesterol.jpg"
 },
 {
 "name" : "tofu", 
@@ -149,6 +149,110 @@
 "name" : "yoghurt", 
 "category" : "dairy",
 "imgUrl" : "https://assets.tetrapak.com/static/publishingimages/processing/content-image/greek-yoghurt-in-bowl.jpg"
-}
+},
 
+{
+    "name" :  "spicy",
+    "category" : "taste",
+    "imgUrl" : "https://i2.wp.com/www.eatthis.com/wp-content/uploads/media/images/ext/993191471/roast-chicken-how-buy-healthiest-chicken.jpg"
+    },
+    {
+    "name" : "desserts", 
+    "category" : "taste",
+    "imgUrl" : "https://files.heftycdn.com/wp-content/uploads/2019/04/c7f06b4bce72dbd0b84240982f2166dc-800x457.jpg"
+    },
+    {
+    "name" : "tangy", 
+    "category" : "taste",
+    "imgUrl" : "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2Ffield%2Fimage%2Fmango-slices-salt-chiles-hero.jpg%3Fitok%3DqiiMqvNS"
+    },
+    {
+    "name" : "rice", 
+    "category" : "taste",
+    "imgUrl" : "https://yaleclimatemediaforum.org/pics/cc/mc/102419_rice.jpg"
+    },
+    {
+    "name" : "fastfood", 
+    "category" : "taste",
+    "imgUrl" : "https://cdn-images-1.medium.com/max/800/1*RIS_6IbCLYv1X3bzYW1lmA.jpeg"
+    },
+    
+     {
+    "name" :  "fruits",
+    "category" : "organic",
+    "imgUrl" : "https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg"
+    },
+    {
+    "name" : "vegetables", 
+    "category" : "organic",
+    "imgUrl" : "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/12_powerhouse_vegetables_slideshow/intro_cream_of_crop.jpg"
+    },
+    {
+    "name" : "pulses", 
+    "category" : "organic",
+    "imgUrl" : "https://www.viralspices.com/wp-content/uploads/2018/07/pulses-and-lentils.jpg"
+    },
+    {
+    "name" : "roots", 
+    "category" : "organic",
+    "imgUrl" : "https://static.businessworld.in/article/article_extra_large_image/1500875844_ISRYUl_organic-vegetables.jpg"
+    },
+    {
+    "name" : "gourds", 
+    "category" : "organic",
+    "imgUrl" : "https://i.pinimg.com/originals/b0/87/fd/b087fd7dac3ca74d9df856514d26cab6.jpg"
+    },
+    
+     {
+    "name" :  "fruits",
+    "category" : "healthy",
+    "imgUrl" : "https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature.jpg"
+    },
+    {
+    "name" : "vegetables", 
+    "category" : "healthy",
+    "imgUrl" : "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/12_powerhouse_vegetables_slideshow/intro_cream_of_crop.jpg"
+    },
+    {
+    "name" : "pulses", 
+    "category" : "healthy",
+    "imgUrl" : "https://www.viralspices.com/wp-content/uploads/2018/07/pulses-and-lentils.jpg"
+    },
+    {
+    "name" : "roots", 
+    "category" : "healthy",
+    "imgUrl" : "https://static.businessworld.in/article/article_extra_large_image/1500875844_ISRYUl_organic-vegetables.jpg"
+    },
+    {
+    "name" : "eggs", 
+    "category" : "healthy",
+    "imgUrl" : "https://i0.wp.com/www.eatthis.com/wp-content/uploads/2018/10/different-ways-cooking-eggs.jpg"
+    },
+    
+    {
+    "name" :  "legumes",
+    "category" : "glutenFree",
+    "imgUrl" : "https://www.health.harvard.edu/media/content/images/p3_Legumes_W1812_gi659524906.jpg"
+    },
+    {
+    "name" : "meats", 
+    "category" : "glutenFree",
+    "imgUrl" : "https://images.ctfassets.net/3s5io6mnxfqz/5GlOYuzg0nApcehTPlbJMy/140abddf0f3f93fa16568f4d035cd5e6/AdobeStock_175165460.jpeg?w=900&fm=jpg&fl=progressive"
+    },
+    {
+    "name" : "cereals", 
+    "category" : "glutenFree",
+    "imgUrl" : "https://cdn.asp.events/CLIENT_Dubai_Wo_4B15F265_5056_B739_54F3125D47F0BC95/sites/Gulfood2020/media/pulses-one.jpg"
+    },
+    {
+    "name" : "herbs", 
+    "category" : "glutenFree",
+    "imgUrl" : "https://gardenerspath.com/wp-content/uploads/2020/04/Grow-Your-Own-Herbs-FB.jpg"
+    },
+    {
+    "name" : "milk", 
+    "category" : "glutenFree",
+    "imgUrl" : "https://joya.info/images/content/1985538-1200x700c53x47-Faktencheck-Milchalternativen.jpg"
+    }
+    
 ]

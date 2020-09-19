@@ -1,4 +1,4 @@
-import {SET_PREF } from '../types'
+import {SET_PREF, SET_AUTHENTICATED } from '../types'
 
 const initialState = {
     authenticatedUser : {
@@ -26,7 +26,12 @@ const initialState = {
 
 export default function(state = initialState , action){
     switch(action.type){
-        
+        case SET_AUTHENTICATED :
+            return {
+                ...state,
+                authenticated : true
+            }
+
         case SET_PREF :
             return {
                 ...state,
