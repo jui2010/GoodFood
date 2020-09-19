@@ -42,63 +42,51 @@ import {EDIT_USER_DETAILS} from '../redux/types'
 var randomColor = require('randomcolor')
 const data = [
     {
-      "subject": "Math",
-      "A": 120,
-      "B": 110,
-      "fullMark": 150
+      "choice": "Organic",
+      "A": 120
     },
     {
-      "subject": "Chinese",
-      "A": 98,
-      "B": 130,
-      "fullMark": 150
+      "choice": "Healthy",
+      "A": 98
     },
     {
-      "subject": "English",
-      "A": 86,
-      "B": 130,
-      "fullMark": 150
+      "choice": "Non-Vegetarian",
+      "A": 86
     },
     {
-      "subject": "Geography",
-      "A": 99,
-      "B": 100,
-      "fullMark": 150
+      "choice": "Eco-friendly",
+      "A": 99
     },
     {
-      "subject": "Physics",
-      "A": 85,
-      "B": 90,
-      "fullMark": 150
+      "choice": "CO2 footprint",
+      "A": 100
     },
     {
-      "subject": "History",
-      "A": 65,
-      "B": 85,
-      "fullMark": 150
+      "choice": "Plastic free",
+      "A": 65
     }
   ]
 
   const data_barchart = [
     {
-      "name": "Page A",
-      "uv": 4000
+      "name": "Eco-friendly",
+      "rate": 45
     },
     {
-      "name": "Page B",
-      "uv": 3000
+      "name": "CO2 footprint",
+      "rate": 90
     },
     {
-      "name": "Page C",
-      "uv": 2000
+      "name": "Cruelty free",
+      "rate": 35
     },
     {
-      "name": "Page D",
-      "uv": 2780
+      "name": "Plastic free",
+      "rate": 78
     },
     {
-      "name": "Page E",
-      "uv": 1890
+      "name": "Social standards",
+      "rate": 12
     }
   ]
 
@@ -320,22 +308,29 @@ export class UserPreferences extends Component {
 
                     <Grid container item direction="row"  style={{}} >
                         <Grid item xs={6} container style={{fontSize: '16px', border : '1px solid black', marginTop : '15px', padding : '5px'}}>
-                            
-                        <RadarChart outerRadius={90} width={450} height={270} data={data}>
-                            <PolarGrid />
-                            <PolarAngleAxis dataKey="subject" />
-                            <PolarRadiusAxis angle={30} domain={[0, 150]} />
-                            <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.2} />
-                        </RadarChart>
+                            <div><b>
+                                Total food consumed 🚀
+                            </b>
+                            </div>  
+                            <RadarChart outerRadius={90} width={450} height={270} data={data}>
+                                <PolarGrid />
+                                <PolarAngleAxis dataKey="choice" />
+                                <PolarRadiusAxis angle={30} domain={[0, 150]} />
+                                <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.2} />
+                            </RadarChart>
                         
                         </Grid>
-                        <Grid item xs={6} container style={{fontSize: '16px', border : '1px solid black', marginTop : '15px', padding : '5px'}}>
+                        <Grid item xs={6} container style={{fontSize: '16px', border : '1px solid black',borderLeft: 'hidden', marginTop : '15px', padding : '5px'}}>
+                            <div><b>
+                                Check how well you are doing👏
+                            </b>
+                            </div>
                             <BarChart width={450} height={270} barSize={20} data={data_barchart}>
                                 <CartesianGrid strokeDasharray="2 2" />
                                 <XAxis dataKey="name" />
                                 <YAxis />
                                 <Tooltip />
-                                <Bar dataKey="uv" fill="#82ca9d" />
+                                <Bar dataKey="rate" fill="#80cbc4" />
                             </BarChart>
                         </Grid>
                     </Grid>

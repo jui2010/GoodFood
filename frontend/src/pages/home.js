@@ -3,6 +3,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Grid from '@material-ui/core/Grid'
 
 import {connect} from 'react-redux'
+// import Product from '../components/Product'
 
 const styles = (theme) => ({
     ...theme.spread,
@@ -24,7 +25,24 @@ class home extends Component {
 
         return (
             <Grid container style={{border: '1px solid black'}}>
-                home
+                <Grid container style={{border: '1px solid black'}}>
+                    Discover products that matter to you!
+                    <Grid container style={{border: '1px solid black'}}>
+                        Gluten
+                    </Grid>
+
+                    <Grid container style={{border: '1px solid black'}}>
+                        egg 
+                    </Grid>
+
+                    <Grid container style={{border: '1px solid black'}}>
+                        gluten
+                    </Grid>
+
+                    <Grid container style={{border: '1px solid black'}}>
+                        eco
+                    </Grid>
+                </Grid>
             </Grid>
         )
     }

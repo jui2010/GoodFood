@@ -3,7 +3,9 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import EmailIcon from '@material-ui/icons/Email'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail'
-
+import LoyaltyIcon from '@material-ui/icons/Loyalty'
+import CountUp from 'react-countup'
+import Paper from '@material-ui/core/Paper'
 import {connect} from 'react-redux'
 
 const styles = (theme) => ({
@@ -57,7 +59,11 @@ const styles = (theme) => ({
         color : '#424242',
         display : 'flex',
         flexDirection : 'row'
-    }
+    },
+    paper : {
+        padding : '15px 20px',
+        width : '100%'
+    },
 })
 
 class UserProfile extends Component {
@@ -68,6 +74,8 @@ class UserProfile extends Component {
 
         return (
             <div className={classes.mainDiv}>
+
+                <Paper elevation={3} className ={classes.paper}>
 
                 <div className={classes.imgDiv}>
                     <img src={profilePicture} alt="profilePicture" className={classes.imgDiv} />
@@ -90,6 +98,20 @@ class UserProfile extends Component {
                     <LocationOnIcon style={{fontSize : '18px', color : '#616161',  marginRight: '10px'}}/> {location}
                 </div> : ''
                 }
+                </Paper>
+
+                <Paper elevation={3} className ={classes.paper} style={{marginTop : '15px'}}>
+                    <div style={{fontSize : '25px', textTransform : 'capitalize', fontFamily: 'Bebas Neue' }}>
+                    <LoyaltyIcon/> Green Points 🌍
+                    </div>
+                    <CountUp style={{fontSize : '30px',  fontFamily: 'Bebas Neue'}}
+                        duration={4.75}
+                        end={1024}
+                    ></CountUp>
+                    <div  style={{fontSize : '12px' }}> 
+                        Redeem now?
+                    </div>
+                </Paper>
 
             </div>
         )
