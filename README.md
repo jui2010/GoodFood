@@ -25,6 +25,27 @@ Then user can clearly see how the products they want to purchase compare across 
 4) The Atrify data set was analysed to get information about a products Nutriscore, CO2 footprints, and other categorization, for enhanced decision-making.
 5) A user can also view the products he bought in the past, and the app will recommend healthy alternatives to the same products.
 
+
+## Features
+###### 1 . Welcome Page
+
+<kbd>
+  <img src="https://github.com/jui2010/GoodFood/blob/master/frontend/src/assets/welcome.png">
+</kbd>
+
+###### 2 . Profile Page
+
+<kbd>
+  <img src="https://github.com/jui2010/GoodFood/blob/master/frontend/src/assets/profile.png">
+</kbd>
+
+###### 3 . Home Page
+
+<kbd>
+  <img src="https://github.com/jui2010/GoodFood/blob/master/frontend/src/assets/home.png">
+</kbd>
+
+
 ## Tools used
 JavaScript, React, Python, Atrify API, Google Cloud, Flask
 
