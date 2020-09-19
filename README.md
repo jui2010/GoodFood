@@ -1,3 +1,7 @@
+<kbd>
+  <img src="https://github.com/jui2010/GoodFood/blob/master/frontend/src/assets/logo.png">
+</kbd>
+
 ## Inspiration
 Research from Food Watch highlights that consumers are looking for different aspects of Honest Products, such as Nutritional Quality, Carbon Footprint, Organic, Vegan.Manufacturers can't possibly print everything on the pack and some marketing claims may be misleading. Brand owners and retailers are not able to provide each consumer with relevant insights in an individual level, at the moment they are buying their groceries.Producers and retailers need more insights about the consumer's decision making process and their preferences + Consumers need information at the right time to help them make a sustainable choice, given their food restrictions and health concerns.
 
