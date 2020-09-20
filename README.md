@@ -1,6 +1,6 @@
-<kbd>
-  <img src="https://github.com/jui2010/GoodFood/blob/master/frontend/src/assets/logo.png">
-</kbd>
+<p align="center">  
+  <img  align="center" src="https://github.com/jui2010/GoodFood/blob/master/frontend/src/assets/logo.png">
+</p>
 
 ## Inspiration
 Research from Food Watch highlights that consumers are looking for different aspects of Honest Products, such as Nutritional Quality, Carbon Footprint, Organic, Vegan.Manufacturers can't possibly print everything on the pack and some marketing claims may be misleading. Brand owners and retailers are not able to provide each consumer with relevant insights in an individual level, at the moment they are buying their groceries.Producers and retailers need more insights about the consumer's decision making process and their preferences + Consumers need information at the right time to help them make a sustainable choice, given their food restrictions and health concerns.
@@ -54,7 +54,7 @@ Before running this locally you must have Node installed
 
 ## Development
 
-1. ```git clone https://github.com/jui2010/Immunize```
+1. ```git clone https://github.com/jui2010/GoodFood```
 2. ```npm install```
 3. ```npm start```
 
